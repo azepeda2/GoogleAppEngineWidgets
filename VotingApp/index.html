@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <h1>Hello {{userName}},
+
+	Vote on your favorite webapp!</h1> 
+
+	<form action="/onvote" method="get">
+      	  <input type="text" name="voteText">
+      	  <input type="submit" value="Submit">
+	</form>
+<a href={{logouturl}}>logout</a> </P>
+
+    {% for v in userVotes %}
+      
+        <b>{{v.vote}} by {{v.user}}</b> <br/>
+    {% endfor %}
+
+  </body>
+</html>

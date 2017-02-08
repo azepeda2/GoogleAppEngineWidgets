@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <h2>Enter a new Customer</h2>
+    <form action="/storeit" method="get">
+      First:<input type="text" name="first"><br/>
+      Last:<input type="text" name="last"><br/>
+      Age:<input type="text" name="age"><br/>
+      Email:<input type="text" name="email"><br/>
+      <input type="submit" value="Submit">
+    </form>
+   <br/>
+   <br/>
+    <h2>Current Customers</h2>
+    {% for c in customerList %}
+	{{c.firstName}}&nbsp;{{c.lastName}}, age={{c.age}}, {{c.email}}<br/>
+    {% endfor %}
+<br/>
+
+<form action="/only_show" method="get">
+      <input type="text" name="searchFirst"><br/>
+      <input type="submit" value="Search by First Name">
+    </form>
+   <br/>
+    <h3> {{searchmessage}} </h3>
+    {% for t in filteredcustomerList %}
+	{{t.firstName}}&nbsp;{{t.lastName}}, age={{t.age}}, {{t.email}}<br/>
+    {% endfor %}
+   <br/>
+  </body>
+</html>

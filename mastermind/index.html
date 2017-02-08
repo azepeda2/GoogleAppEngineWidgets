@@ -1,0 +1,64 @@
+<html>
+  <body>
+    <h2>Mastermind</h2>
+    
+
+    <h3>Enter the colors and try to guess the secret combination of colors! Goodluck!</h3>
+
+    <FORM ACTION="/on_guess" method="get">
+Choose your first color<P>
+
+<INPUT TYPE=RADIO NAME="color1" VALUE="red"><img src="/images/red.jpg"/><BR>
+<INPUT TYPE=RADIO NAME="color1" VALUE="blue"><img src="/images/blue.jpg"/><BR>
+<INPUT TYPE=RADIO NAME="color1" VALUE="green"><img src="/images/green.jpg"/><Br>
+<INPUT TYPE=RADIO NAME="color1" VALUE="purple"><img src="/images/purple.jpg"/><BR>
+<INPUT TYPE=RADIO NAME="color1" VALUE="yellow"><img src="/images/yellow.jpg"/><Br>
+<INPUT TYPE=RADIO NAME="color1" VALUE="brown"><img src="/images/brown.jpg"/><P>
+
+Choose your second color<P>
+
+<INPUT TYPE=RADIO NAME="color2" VALUE="red"><img src="/images/red.jpg"/><BR>
+<INPUT TYPE=RADIO NAME="color2" VALUE="blue"><img src="/images/blue.jpg"/><BR>
+<INPUT TYPE=RADIO NAME="color2" VALUE="green"><img src="/images/green.jpg"/><Br>
+<INPUT TYPE=RADIO NAME="color2" VALUE="purple"><img src="/images/purple.jpg"/><BR>
+<INPUT TYPE=RADIO NAME="color2" VALUE="yellow"><img src="/images/yellow.jpg"/><Br>
+<INPUT TYPE=RADIO NAME="color2" VALUE="brown"><img src="/images/brown.jpg"/><P>
+
+Choose your third color<P>
+
+<INPUT TYPE=RADIO NAME="color3" VALUE="red"><img src="/images/red.jpg"/><BR>
+<INPUT TYPE=RADIO NAME="color3" VALUE="blue"><img src="/images/blue.jpg"/><BR>
+<INPUT TYPE=RADIO NAME="color3" VALUE="green"><img src="/images/green.jpg"/><Br>
+<INPUT TYPE=RADIO NAME="color3" VALUE="purple"><img src="/images/purple.jpg"/><BR>
+<INPUT TYPE=RADIO NAME="color3" VALUE="yellow"><img src="/images/yellow.jpg"/><Br>
+<INPUT TYPE=RADIO NAME="color3" VALUE="brown"><img src="/images/brown.jpg"/><P>
+
+
+Choose your fourth color<P>
+
+<INPUT TYPE=RADIO NAME="color4" VALUE="red"><img src="/images/red.jpg"/><BR>
+<INPUT TYPE=RADIO NAME="color4" VALUE="blue"><img src="/images/blue.jpg"/><BR>
+<INPUT TYPE=RADIO NAME="color4" VALUE="green"><img src="/images/green.jpg"/><Br>
+<INPUT TYPE=RADIO NAME="color4" VALUE="purple"><img src="/images/purple.jpg"/><BR>
+<INPUT TYPE=RADIO NAME="color4" VALUE="yellow"><img src="/images/yellow.jpg"/><Br>
+<INPUT TYPE=RADIO NAME="color4" VALUE="brown"><img src="/images/brown.jpg"/><P>
+
+<INPUT TYPE=SUBMIT VALUE="submit"><P>
+</FORM>
+
+    Last Guess: {{guess}} <br/>
+    Number of exact matches: {{match}} <br/>
+    Number of partial matches: {{partialMatches}} <br/>
+    {{gameStatus}} <br/>
+    <a href=/newgame>New Game</a>
+
+    <h2>History of all User's Number of Guesses</h2>
+    {% for number in showScores %}
+	{{number.numGuesses}}
+    {% endfor %}
+    </P>
+    
+    
+
+  </body>
+</html>

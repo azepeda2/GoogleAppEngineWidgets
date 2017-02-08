@@ -1,0 +1,23 @@
+<html>
+  <body>
+    <h1> Drow'z Twitter</h1>
+
+    <FORM ACTION="/submit_tweet" method="get">
+<P>
+
+<INPUT TYPE="text" name="statusText">
+<INPUT TYPE=SUBMIT VALUE="Submit">
+
+</FORM>
+</P>
+    <h2> Tweets </h2>
+    {% for t in tweets %}
+    {{t.statusMessage}} <br/>
+    {{t.date}}<br/>
+    {{t.user.email}}<br/>
+    {% endfor %}
+
+    <a href={{logouturl}}>Log Out</a>
+
+  </body>
+</html>

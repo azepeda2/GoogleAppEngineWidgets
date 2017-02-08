@@ -1,0 +1,9 @@
+    {% for item in list %}
+      
+        <b>{{ item.field}}</b> 
+    {% endfor %}
+
+    <form action="/act" method="get">
+      <input type="text" name="p1">
+      <input type="submit" value="Submit">
+    </form>
